@@ -218,6 +218,18 @@
   .pd table{min-width:0;font-size:.85rem}
   .pd th{width:32%;white-space:nowrap}
   @media(max-width:900px){.plan-wrap{grid-template-columns:1fr} .detail-panel{position:static}}
+  .fab{position:fixed;right:18px;bottom:18px;z-index:55;display:inline-flex;align-items:center;gap:8px;background:var(--clay);color:#fff;font-family:"Fraunces";font-weight:700;font-size:.92rem;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 12px 28px -10px rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.35)}
+  .fab:hover{background:var(--clay-deep);color:#fff;transform:translateY(-1px)}
+  .fab svg{width:18px;height:18px}
+  .collab-embed{border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);background:#f4f4f4}
+  .side-top{display:flex;align-items:center;gap:8px;padding:12px 18px;border-bottom:1px solid #2e2416;background:#3a2a1a;color:#ffe7a8;font-family:"Fraunces";font-weight:700;font-size:.9rem;text-decoration:none}
+  .side-top:hover{background:#46341f;color:#fff}
+  .side-top svg{width:16px;height:16px}
+  .sec-suggest{max-width:var(--maxw);margin:18px auto 0;padding:0 22px;text-align:right}
+  .sec-suggest a{display:inline-flex;align-items:center;gap:7px;font-family:"Fraunces";font-weight:600;font-size:.8rem;color:var(--clay);text-decoration:none;border:1px dashed var(--clay);padding:6px 13px;border-radius:999px}
+  .sec-suggest a:hover{background:rgba(181,70,46,.1)}
+  .sec-suggest svg{width:15px;height:15px}
+  @media print{.fab,.sec-suggest{display:none}}
 </style>
 </head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -246,11 +258,12 @@
   <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5v10l-9 5-9-5V7Z"/><path d="m12 2v10m0 0 9-5m-9 5-9-5"/></symbol>
   <symbol id="i-lantern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v3M14 3v3"/><rect x="7" y="6" width="10" height="12" rx="3"/><path d="M12 18v3"/></symbol>
   <symbol id="i-paint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></symbol>
-</defs></svg>
-<aside class="sidebar" id="sidebar"><a class="side-brand" href="#top"><span class="dot"></span><span><b>The Shire</b><span>Master Plan + Architecture</span></span></a><div class="side-group"><button class="side-group-title" type="button">I &middot; Master Plan<span class="chev">&#9662;</span></button><ul><li><a href="#vision"><span class="side-num">01</span>Vision</a></li><li><a href="#look"><span class="side-num">02</span>The Hamlet Look</a></li><li><a href="#grid"><span class="side-num">03</span>Grid Site Plan</a></li><li><a href="#homes"><span class="side-num">04</span>Homestead Commons</a></li><li><a href="#planting"><span class="side-num">05</span>Planting Plan</a></li><li><a href="#farmplan"><span class="side-num">06</span>Interactive Planting Map</a></li><li><a href="#materials"><span class="side-num">07</span>Materials & Costs</a></li><li><a href="#budget"><span class="side-num">08</span>Startup Budget</a></li><li><a href="#land"><span class="side-num">09</span>Land & Listings</a></li><li><a href="#utilities"><span class="side-num">10</span>Utilities & Septic</a></li><li><a href="#permits"><span class="side-num">11</span>Permits</a></li><li><a href="#money"><span class="side-num">12</span>Funding & Grants</a></li><li><a href="#phases"><span class="side-num">13</span>Phased Roadmap</a></li><li><a href="#brand"><span class="side-num">14</span>Name & Brand</a></li><li><a href="#steps"><span class="side-num">15</span>First 90 Days</a></li></ul></div><div class="side-group"><button class="side-group-title" type="button">II &middot; Architecture<span class="chev">&#9662;</span></button><ul><li><a href="#philosophy"><span class="side-num">16</span>Design Philosophy</a></li><li><a href="#palette"><span class="side-num">17</span>Material & Color Palette</a></li><li><a href="#hall"><span class="side-num">18</span>The Great Hall</a></li><li><a href="#section"><span class="side-num">19</span>Soil Section & Assembly</a></li><li><a href="#elevation"><span class="side-num">20</span>South Elevation</a></li><li><a href="#axon"><span class="side-num">21</span>3D Cutaway</a></li><li><a href="#systems"><span class="side-num">22</span>Finishes & Systems</a></li><li><a href="#cottages"><span class="side-num">23</span>Burrow Cottages</a></li><li><a href="#greenhall"><span class="side-num">24</span>The Green Hall</a></li><li><a href="#light"><span class="side-num">25</span>Lighting Design</a></li><li><a href="#build"><span class="side-num">26</span>Construction Sequence</a></li></ul></div><div class="side-group"><button class="side-group-title" type="button">III &middot; Details &amp; Specs<span class="chev">&#9662;</span></button><ul><li><a href="#interior"><span class="side-num">27</span>Interior Views</a></li><li><a href="#planview"><span class="side-num">28</span>Interactive Floor Plan</a></li><li><a href="#cottage-detail"><span class="side-num">29</span>Cottage Detail Sheet</a></li><li><a href="#mockup"><span class="side-num">30</span>Wall Mock-up Spec</a></li><li><a href="#landscape"><span class="side-num">31</span>Landscape & Green Roofs</a></li><li><a href="#floorplans"><span class="side-num">32</span>Building Floor Plans</a></li></ul></div><div class="side-foot">Earth-sheltered agritourism hamlet<br>Wake County, NC &middot; concept plan</div></aside>
+<symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5Z"/></symbol></defs></svg>
+<aside class="sidebar" id="sidebar"><a class="side-brand" href="#top"><span class="dot"></span><span><b>The Shire</b><span>Master Plan + Architecture</span></span></a><a class="side-top" href="#collab"><svg><use href="#i-chat"/></svg> Collaborate &amp; Suggest</a><div class="side-group"><button class="side-group-title" type="button">I &middot; Master Plan<span class="chev">&#9662;</span></button><ul><li><a href="#vision"><span class="side-num">01</span>Vision</a></li><li><a href="#look"><span class="side-num">02</span>The Hamlet Look</a></li><li><a href="#grid"><span class="side-num">03</span>Grid Site Plan</a></li><li><a href="#homes"><span class="side-num">04</span>Homestead Commons</a></li><li><a href="#planting"><span class="side-num">05</span>Planting Plan</a></li><li><a href="#farmplan"><span class="side-num">06</span>Interactive Planting Map</a></li><li><a href="#materials"><span class="side-num">07</span>Materials & Costs</a></li><li><a href="#budget"><span class="side-num">08</span>Startup Budget</a></li><li><a href="#land"><span class="side-num">09</span>Land & Listings</a></li><li><a href="#utilities"><span class="side-num">10</span>Utilities & Septic</a></li><li><a href="#permits"><span class="side-num">11</span>Permits</a></li><li><a href="#money"><span class="side-num">12</span>Funding & Grants</a></li><li><a href="#phases"><span class="side-num">13</span>Phased Roadmap</a></li><li><a href="#brand"><span class="side-num">14</span>Name & Brand</a></li><li><a href="#steps"><span class="side-num">15</span>First 90 Days</a></li></ul></div><div class="side-group"><button class="side-group-title" type="button">II &middot; Architecture<span class="chev">&#9662;</span></button><ul><li><a href="#philosophy"><span class="side-num">16</span>Design Philosophy</a></li><li><a href="#palette"><span class="side-num">17</span>Material & Color Palette</a></li><li><a href="#hall"><span class="side-num">18</span>The Great Hall</a></li><li><a href="#section"><span class="side-num">19</span>Soil Section & Assembly</a></li><li><a href="#elevation"><span class="side-num">20</span>South Elevation</a></li><li><a href="#axon"><span class="side-num">21</span>3D Cutaway</a></li><li><a href="#systems"><span class="side-num">22</span>Finishes & Systems</a></li><li><a href="#cottages"><span class="side-num">23</span>Burrow Cottages</a></li><li><a href="#greenhall"><span class="side-num">24</span>The Green Hall</a></li><li><a href="#light"><span class="side-num">25</span>Lighting Design</a></li><li><a href="#build"><span class="side-num">26</span>Construction Sequence</a></li></ul></div><div class="side-group"><button class="side-group-title" type="button">III &middot; Details &amp; Specs<span class="chev">&#9662;</span></button><ul><li><a href="#interior"><span class="side-num">27</span>Interior Views</a></li><li><a href="#planview"><span class="side-num">28</span>Interactive Floor Plan</a></li><li><a href="#cottage-detail"><span class="side-num">29</span>Cottage Detail Sheet</a></li><li><a href="#mockup"><span class="side-num">30</span>Wall Mock-up Spec</a></li><li><a href="#landscape"><span class="side-num">31</span>Landscape & Green Roofs</a></li><li><a href="#floorplans"><span class="side-num">32</span>Building Floor Plans</a></li></ul></div><div class="side-foot">Earth-sheltered agritourism hamlet<br>Wake County, NC &middot; concept plan</div></aside>
 <div class="scrim" id="scrim"></div>
 <div class="content">
 <div class="topbar"><button class="menu-toggle" id="menuBtn">&#9776; Menu</button><span class="tb-brand">The Shire &middot; Complete Plan</span></div>
+<a class="fab" href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit</a>
 <header class="hero" id="top">
  <div class="hero-text">
   <div class="eyebrow">An earth-sheltered agritourism hamlet &middot; Wake County, North Carolina</div>
@@ -315,7 +328,18 @@
  </svg>
  <div class="divider"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#f3e9d2" d="M0,40 C220,12 460,12 720,30 C980,48 1220,46 1440,26 L1440,60 L0,60 Z"/></svg></div>
 </header>
-<section id="contents"><div class="wrap"><div class="sec-head ctr"><div class="kicker" style="justify-content:center"><span class="ic"><svg><use href="#i-doc"/></svg></span><span class="eyebrow">Table of Contents</span></div><h2>Everything, in one place</h2><p>The full plan in three parts: the business and the land, the architecture of the buildings, and the builder-grade details and drawings. Use the side menu or this index to jump anywhere.</p></div><div class="toc-grid"><div class="toc-col"><h3>Part I &middot; The Master Plan</h3><a href="#vision"><span>01</span>Vision</a><a href="#look"><span>02</span>The Hamlet Look</a><a href="#grid"><span>03</span>Grid Site Plan</a><a href="#homes"><span>04</span>Homestead Commons</a><a href="#planting"><span>05</span>Planting Plan</a><a href="#farmplan"><span>06</span>Interactive Planting Map</a><a href="#materials"><span>07</span>Materials & Costs</a><a href="#budget"><span>08</span>Startup Budget</a><a href="#land"><span>09</span>Land & Listings</a><a href="#utilities"><span>10</span>Utilities & Septic</a><a href="#permits"><span>11</span>Permits</a><a href="#money"><span>12</span>Funding & Grants</a><a href="#phases"><span>13</span>Phased Roadmap</a><a href="#brand"><span>14</span>Name & Brand</a><a href="#steps"><span>15</span>First 90 Days</a></div><div class="toc-col"><h3>Part II &middot; Architecture</h3><a href="#philosophy"><span>16</span>Design Philosophy</a><a href="#palette"><span>17</span>Material & Color Palette</a><a href="#hall"><span>18</span>The Great Hall</a><a href="#section"><span>19</span>Soil Section & Assembly</a><a href="#elevation"><span>20</span>South Elevation</a><a href="#axon"><span>21</span>3D Cutaway</a><a href="#systems"><span>22</span>Finishes & Systems</a><a href="#cottages"><span>23</span>Burrow Cottages</a><a href="#greenhall"><span>24</span>The Green Hall</a><a href="#light"><span>25</span>Lighting Design</a><a href="#build"><span>26</span>Construction Sequence</a></div><div class="toc-col"><h3>Part III &middot; Details &amp; Specs</h3><a href="#interior"><span>27</span>Interior Views</a><a href="#planview"><span>28</span>Interactive Floor Plan</a><a href="#cottage-detail"><span>29</span>Cottage Detail Sheet</a><a href="#mockup"><span>30</span>Wall Mock-up Spec</a><a href="#landscape"><span>31</span>Landscape & Green Roofs</a><a href="#floorplans"><span>32</span>Building Floor Plans</a></div></div></div></section>
+<section id="contents"><div class="wrap"><div class="sec-head ctr"><div class="kicker" style="justify-content:center"><span class="ic"><svg><use href="#i-doc"/></svg></span><span class="eyebrow">Table of Contents</span></div><h2>Everything, in one place</h2><p>The full plan in three parts. Use the side menu or this index to jump anywhere, and the <a href="#collab">Collaborate</a> board to add your own ideas.</p></div><div class="toc-grid"><div class="toc-col"><h3>Part I &middot; The Master Plan</h3><a href="#vision"><span>01</span>Vision</a><a href="#look"><span>02</span>The Hamlet Look</a><a href="#grid"><span>03</span>Grid Site Plan</a><a href="#homes"><span>04</span>Homestead Commons</a><a href="#planting"><span>05</span>Planting Plan</a><a href="#farmplan"><span>06</span>Interactive Planting Map</a><a href="#materials"><span>07</span>Materials & Costs</a><a href="#budget"><span>08</span>Startup Budget</a><a href="#land"><span>09</span>Land & Listings</a><a href="#utilities"><span>10</span>Utilities & Septic</a><a href="#permits"><span>11</span>Permits</a><a href="#money"><span>12</span>Funding & Grants</a><a href="#phases"><span>13</span>Phased Roadmap</a><a href="#brand"><span>14</span>Name & Brand</a><a href="#steps"><span>15</span>First 90 Days</a></div><div class="toc-col"><h3>Part II &middot; Architecture</h3><a href="#philosophy"><span>16</span>Design Philosophy</a><a href="#palette"><span>17</span>Material & Color Palette</a><a href="#hall"><span>18</span>The Great Hall</a><a href="#section"><span>19</span>Soil Section & Assembly</a><a href="#elevation"><span>20</span>South Elevation</a><a href="#axon"><span>21</span>3D Cutaway</a><a href="#systems"><span>22</span>Finishes & Systems</a><a href="#cottages"><span>23</span>Burrow Cottages</a><a href="#greenhall"><span>24</span>The Green Hall</a><a href="#light"><span>25</span>Lighting Design</a><a href="#build"><span>26</span>Construction Sequence</a></div><div class="toc-col"><h3>Part III &middot; Details &amp; Specs</h3><a href="#interior"><span>27</span>Interior Views</a><a href="#planview"><span>28</span>Interactive Floor Plan</a><a href="#cottage-detail"><span>29</span>Cottage Detail Sheet</a><a href="#mockup"><span>30</span>Wall Mock-up Spec</a><a href="#landscape"><span>31</span>Landscape & Green Roofs</a><a href="#floorplans"><span>32</span>Building Floor Plans</a></div></div></div></section>
+<section id="collab" class="tint-gold">
+ <div class="wrap">
+  <div class="sec-head ctr"><div class="kicker" style="justify-content:center"><span class="ic"><svg><use href="#i-chat"/></svg></span><span class="eyebrow">Collaborate</span></div>
+  <h2>Pitch In Your Ideas</h2>
+  <p>This plan grows with the group, no account or app needed. On the board below, pick the column for the spot you want to change (Budget, Orchard, Great Hall, and so on), add a note with your name and idea, and post. We read everything and fold the best ideas into the page, then republish.</p></div>
+  <div class="collab-embed">
+   <div class="padlet-embed" style="border:0;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><iframe src="https://padlet.com/embed/d77ma8v6n7ao1ygs" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:640px;display:block;padding:0;margin:0"></iframe></div>
+  </div>
+  <p class="figcap">No login required, just add a note to the right column. You can also like and reply to others' ideas. The board updates live; the page updates whenever the plan is revised.</p>
+ </div>
+</section>
 <div class="part" id="part-I"><div class="wrap"><span class="part-num">Part I</span><h2>The Master Plan</h2><p>The business, the land, the money, and the phased path from square one.</p></div></div>
 <section id="vision">
  <div class="wrap">
@@ -335,7 +359,7 @@
    <p>Plant the slow things first (trees, vines, bees, soil). Earn money early from cheap, high-draw farm events. Build the cozy, expensive structures as the farm pays for them. The lazy river, the most expensive and permit-heavy piece, is parked as a <strong>reserved future phase</strong>: we protect its corridor on the map but build it last, long after we are open and profitable.</p>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="look" class="tint">
  <div class="wrap">
   <div class="sec-head">
@@ -349,7 +373,7 @@
    <div class="card accent-clay"><h4><span class="ic"><svg><use href="#i-drop"/></svg></span>Humid clay is hard mode</h4><p>Done wrong it means damp and mold. Done right it is wonderful. Non-negotiables: <strong>true exterior waterproofing</strong>, drainage boards, footing drains, granular backfill, <strong>mechanical dehumidification</strong>, and radon mitigation. Reinforced concrete or ICF shells, never wood frame. Budget a 10 to 20% premium.</p></div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="grid">
  <div class="wrap">
   <div class="sec-head">
@@ -485,7 +509,7 @@
   </div>
   <p class="tbl-cap">Reserved separately: the future lazy river follows the dashed perimeter corridor and is intentionally left out of the start plan and budget.</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="homes" class="tint">
  <div class="wrap">
   <div class="sec-head">
@@ -541,7 +565,7 @@
   </div>
   <p class="tbl-cap">Split six ways, the shared infrastructure runs roughly $34,000 to $69,000 per family before building a house. Wells and septic are the swing; a shared community well or cluster system can lower it (and may be required or restricted, verify with Wake Environmental Health).</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="planting">
  <div class="wrap">
   <div class="sec-head">
@@ -645,7 +669,7 @@
    <div class="card" style="padding:16px"><h4 style="font-size:1rem"><span class="pill p2">Fall</span></h4><p style="font-size:.9rem;margin:0">Pumpkin + corn-maze season (the revenue peak); plant garlic and fall greens; seed fescue lawns; sow cover crops.</p></div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="farmplan" class="tint-gold">
  <div class="wrap">
   <div class="sec-head"><div class="kicker"><span class="ic"><svg><use href="#i-leaf"/></svg></span><span class="eyebrow">Interactive &middot; The 30-Acre Farm</span></div>
@@ -919,7 +943,7 @@
    show('hollow');
  })();
  </script>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="materials">
  <div class="wrap">
   <div class="sec-head">
@@ -1000,7 +1024,7 @@
   </div>
   <p class="tbl-cap">Built into a natural slope, the earth does most of the work, both for the seating and for keeping the sound on our own land. Grow it from a simple stage to a full terraced bowl over time.</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="budget" class="tint-gold">
  <div class="wrap">
   <div class="sec-head">
@@ -1079,7 +1103,7 @@
    </div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="land">
  <div class="wrap">
   <div class="sec-head">
@@ -1130,7 +1154,7 @@
    </div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="utilities" class="tint">
  <div class="wrap">
   <div class="sec-head">
@@ -1150,7 +1174,7 @@
   </div>
   <div class="callout c-adv" style="margin-top:20px"><svg class="lic"><use href="#i-check"/></svg><span class="tag">Earth-sheltered = moisture discipline</span><p>Exterior waterproofing, drainage boards, footing drains, granular backfill, <strong>mandatory mechanical dehumidification</strong>, and a radon system (Wake is EPA Zone 2). Size each utility to the current phase and <strong>stub conduit and water toward future cottages now</strong> while the trenches are open, so later phases plug in instead of digging twice.</p></div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="permits">
  <div class="wrap">
   <div class="sec-head">
@@ -1166,7 +1190,7 @@
   </div>
   <div class="callout c-warn" style="margin-top:18px"><svg class="lic"><use href="#i-bolt"/></svg><span class="tag">Confirm with the county + a lawyer</span><p>Which structures the farm exemption covers vs. public-assembly code; alcohol service near the future river (cans only); whether Aedin's Law's permit applies to a standalone barnyard; how Wake counts rental units for the 4-unit lodging exemption; whether the parcel's watershed class limits your homestead lot count; and the current fee schedules.</p></div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="money" class="tint">
  <div class="wrap">
   <div class="sec-head">
@@ -1186,7 +1210,7 @@
    <p><strong>Present-Use Value</strong> taxes the farmland on use, not market value (file AV-5). <strong>Agritourism liability immunity</strong> (G.S. 99E-30) shields inherent-risk claims if you post the statutory sign. <strong>Farm sales-tax exemption</strong> on equipment, seed, and supplies. The <strong>impervious-surface unlock</strong> (green roofs + permeable cobble) opens watershed-capped land a normal build cannot use. And the <strong>bona fide farm zoning exemption</strong> keeps the whole farm side out of county zoning.</p>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="phases">
  <div class="wrap">
   <div class="sec-head ctr">
@@ -1207,7 +1231,7 @@
     <div class="phase-body"><div><h5>What we do</h5><ul class="clean"><li>Build the recirculating lazy river around the reserved perimeter corridor, with its float-up pizza dock and night lighting.</li><li>Complete the public-pool permitting, barriers, filtration, and Certified Pool Operator program.</li></ul></div><div><h5>Why last</h5><p>It is the most expensive and most permit-heavy piece. We protect its corridor from day one but only build it once the farm clearly pays for it. A small splash feature can bridge the gap earlier.</p></div></div></div></div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="brand" class="tint-gold">
  <div class="wrap">
   <div class="sec-head">
@@ -1229,7 +1253,7 @@
    <div class="card accent-gold"><h4><span class="ic"><svg><use href="#i-coins"/></svg></span>Apparel &amp; merch</h4><p>Merch is marketing that pays you:</p><ul class="clean"><li>Trucker hats, vintage-wash and kids' tees</li><li>Round-door enamel pins, koozies, mug club</li><li>Collectible can art as a fridge billboard</li></ul><p style="margin-bottom:0"><strong>Taglines:</strong> "Farm. Fire. Float." / "Knock on the round door."</p></div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="steps">
  <div class="wrap">
   <div class="sec-head ctr">
@@ -1257,7 +1281,7 @@
    <p>Buy a 45-to-55-acre creek parcel, keep the homes on their own lots so the 30 farm acres stay a bona fide farm, build cozy and earth-sheltered so the look doubles as energy savings and watershed compliance, open the farm cheaply with a pizza trailer and sunflower festivals, add the cellar brewery as the cash engine, then the Green Hall and cottages, and save the lazy river for last.</p>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <div class="part" id="part-II"><div class="wrap"><span class="part-num">Part II</span><h2>The Architecture</h2><p>How the buildings look and how they are built into the hill.</p></div></div>
 <section id="philosophy">
  <div class="wrap">
@@ -1275,7 +1299,7 @@
    <div class="card accent-clay"><h4><span class="ic"><svg><use href="#i-check"/></svg></span>Real materials only</h4><p>Hobbiton reads as magic because the brick, stone, and thatch are real and weathering. We use NC granite, white oak, lime render, copper, and a living roof, never plastic or paint pretending to be them.</p></div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="palette" class="tint">
  <div class="wrap">
   <div class="sec-head">
@@ -1328,7 +1352,7 @@
    <p>Use one muted hero door color per building against lime-white walls, honey stone, and black ironwork. <strong>Avoid the four classic mistakes:</strong> bright kelly-green doors (use olive Bag End Green instead), fire-engine red (use ox blood), school-bus yellow (use soft India Yellow), and splashing candy-teal "verdigris" everywhere (real aged copper is the muted <code>#376D64</code>). If a swatch looks clean and bright, desaturate it 15 to 25%.</p>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="hall">
  <div class="wrap">
   <div class="sec-head">
@@ -1481,7 +1505,7 @@
   </div>
   <p class="figcap">A-101 Floor plan. North (top) is buried in the hill: brewery cellar, cold store, and mechanical sit in the coolest, deepest earth. The hall opens south to light and the terrace. The round oak door is the only "front door," centered on the compression-and-release axis straight to the hearth and copper brewhouse.</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="section" class="tint">
  <div class="wrap">
   <div class="sec-head">
@@ -1663,7 +1687,7 @@
    </div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="elevation">
  <div class="wrap">
   <div class="sec-head">
@@ -1769,7 +1793,7 @@
   </div>
   <p class="figcap">A-301 South elevation. Half-timbered lime render over a split-face granite base, leaded glass glowing warm, a copper cupola going to patina, and the living roof merging into the hillside. One bold but muted color: the Bag End green door.</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="axon" class="tint-blue">
  <div class="wrap">
   <div class="sec-head">
@@ -1839,7 +1863,7 @@
   </div>
   <p class="figcap">A-401 Cutaway. The building is a single shell pushed into the slope: production at the cool, dark back; the social hall stepping out toward the southern light and the terrace. The roof corner is peeled to show the living-roof stack from sedum down to the structural deck.</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="systems">
  <div class="wrap">
   <div class="sec-head">
@@ -1870,7 +1894,7 @@
    <div class="card accent-gold"><h4><span class="ic"><svg><use href="#i-sun"/></svg></span>Light &amp; safety</h4><p>South glazing at 30 to 40%, clerestory monitors, and tubular skylights bring daylight deep into a buried plan (and meet the IECC toplighting rule). A <strong>full radon system</strong> (gravel layer, 15-mil barrier, vent + fan) is standard for Zone 2 Wake; sprinklers throughout.</p></div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="cottages" class="tint">
  <div class="wrap">
   <div class="sec-head">
@@ -1938,7 +1962,7 @@
   </div>
   <p class="figcap">A-110 Cottage plan and section. The same earth-shelter logic as the hall: dark cozy back in the hill, bright open face to the south and the view.</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="greenhall">
  <div class="wrap">
   <div class="sec-head">
@@ -1986,7 +2010,7 @@
   </div>
   <p class="figcap">A-120 The hammerbeam roof springs from the stone walls and opens the whole volume to the peak, the timber engineering that makes a barn feel like a cathedral.</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="light" class="tint">
  <div class="wrap">
   <div class="sec-head">
@@ -2022,7 +2046,7 @@
    <p>Warm, dim, shielded, and aimed at things (not the sky). Restraint is the whole trick: a few glowing lanterns and a tree read as magic, while a parking-lot blaze of cool floodlight kills it instantly. The same restraint that makes it enchanting makes it dark-sky friendly and cheap to run.</p>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="build">
  <div class="wrap">
   <div class="sec-head">
@@ -2046,7 +2070,7 @@
    <p>The retaining walls and the earth-covered roof span are beyond prescriptive code and <strong>must be designed and stamped by a North Carolina structural engineer</strong>, on top of a geotechnical report, a licensed architect, and Wake County permits. Earth-sheltered building rewards precision and punishes shortcuts, especially on waterproofing and humidity control. Build a test mock-up of the wall assembly, and budget the active radon fan and the dehumidification from day one.</p>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <div class="part" id="part-III"><div class="wrap"><span class="part-num">Part III</span><h2>Details &amp; Specs</h2><p>Interior views, the interactive floor plan, construction details, the builder mock-up, planting, and measured plans.</p></div></div>
 <section id="interior">
  <div class="wrap">
@@ -2243,7 +2267,7 @@
    <div class="card accent-bark"><h4><span class="ic"><svg><use href="#i-leaf"/></svg></span>The light wall</h4><p>The south wall brings the day in: the round oak door dead center under a fanlight, framed by tall leaded windows that open the hall to the terrace and the hill.</p></div>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="planview" class="tint">
  <div class="wrap">
   <div class="sec-head"><div class="kicker"><span class="ic"><svg><use href="#i-grid"/></svg></span><span class="eyebrow">Interactive &middot; The Great Hall</span></div>
@@ -2494,7 +2518,7 @@
    show('bar');
  })();
  </script>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="cottage-detail" class="tint-blue">
  <div class="wrap">
   <div class="sec-head"><div class="kicker"><span class="ic"><svg><use href="#i-ruler"/></svg></span><span class="eyebrow">Builder-Grade Detail</span></div>
@@ -2570,7 +2594,7 @@
    </table>
   </div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="mockup">
  <div class="wrap">
   <div class="sec-head"><div class="kicker"><span class="ic"><svg><use href="#i-hammer"/></svg></span><span class="eyebrow">Hand This to the Builder</span></div>
@@ -2634,7 +2658,7 @@
   </div>
   <p class="tbl-cap">Sign-off: architect, waterproofing manufacturer's rep, and the GC all witness and initial each test before full construction proceeds. Keep the mock-up on site as the quality benchmark.</p>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="landscape" class="tint">
  <div class="wrap">
   <div class="sec-head"><div class="kicker"><span class="ic"><svg><use href="#i-leaf"/></svg></span><span class="eyebrow">Growing On It, Around It &amp; Up It</span></div>
@@ -2724,7 +2748,7 @@
 
   <div class="callout c-adv" style="margin-top:18px"><svg class="lic"><use href="#i-check"/></svg><span class="tag">How to keep it alive</span><p>Run <strong>drip irrigation on the roof and berms through the first establishment year</strong>, then let the sedum and natives go rain-fed (the deeper edible pockets keep a drip line). Feed the roof lightly once a year, weed it twice, and the building only gets more beautiful as it grows in. Capture rainwater off any non-planted surfaces to water the edible pockets and the door beds.</p></div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <section id="floorplans">
  <div class="wrap">
   <div class="sec-head"><div class="kicker"><span class="ic"><svg><use href="#i-grid"/></svg></span><span class="eyebrow">Measured Plans for Every Building</span></div>
@@ -2871,7 +2895,7 @@
 
   <div class="callout c-note" style="margin-top:18px"><svg class="lic"><use href="#i-ruler"/></svg><span class="tag">How to read these</span><p>Each plan is drawn to the scale in its title block, north-up, with the bermed wall (double-thick line) to the north and the round door and glazing to the south. Walls, partitions, fixtures, and furniture are located to show how each building actually works; a licensed architect and engineer will turn these schematic plans into permit and construction drawings.</p></div>
  </div>
-</section>
+<div class="sec-suggest"><a href="#collab"><svg><use href="#i-chat"/></svg> Suggest an edit for this section</a></div></section>
 <footer><div class="wrap">
   <div class="foot-grid">
    <div><div class="side-brand" style="border:0;padding:0;background:none"><span class="dot"></span><span><b style="color:#fff">The Shire</b><span style="color:#bdac8c">Complete Plan</span></span></div>
@@ -2913,4 +2937,5 @@
   }); }
 })();
 </script>
+<script>(function(){var t=document.querySelector('.side-top');if(t)t.addEventListener('click',function(){var sb=document.getElementById('sidebar'),sc=document.getElementById('scrim');if(sb)sb.classList.remove('open');if(sc)sc.classList.remove('show');});})();</script>
 </body></html>
